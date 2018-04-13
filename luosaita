@@ -1,0 +1,7 @@
+def move(n,a,b,c):
+    if n==1:
+        print(a,'-->',c)#a上只有1个盘子
+    else:#a上有2个盘子
+        move(n-1,a,c,b)#把a上的n-1块移动到b
+        move(1,a,b,c)#把a上的最后一块移动到c
+        move(n-1,b,a,c)#把b上的n-1块移动到c
